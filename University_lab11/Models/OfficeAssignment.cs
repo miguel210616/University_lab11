@@ -19,5 +19,7 @@ namespace University_lab11.Models
 
         public virtual Instructor Instructor { get; set; }
 
+        public int Activo { get; set; }
+
     }
 }
