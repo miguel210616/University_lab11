@@ -16,5 +16,7 @@ namespace University_lab11.Models
 
         public virtual ICollection<Enrollment> Enrollments { get; set; }
 
+        public int Activo { get; set; }
+
     }
 }

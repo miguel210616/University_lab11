@@ -18,7 +18,7 @@ namespace University_lab11.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.People.ToList());
+            return View(db.Students.Where(x => x.Activo == 1).ToList());
         }
 
         // GET: Students/Details/5
@@ -51,6 +51,7 @@ namespace University_lab11.Controllers
         {
             if (ModelState.IsValid)
             {
+                student.Activo = 1;
                 db.People.Add(student);
                 db.SaveChanges();
                 return RedirectToAction("Index");
